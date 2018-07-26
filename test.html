@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript" src="js/FileSaver.js" ></script>
+	<script>
+		//写文件
+		var content = "这是直接使用HTML5进行导出的";
+	    var blob = new Blob([content], {type: "text/plain;charset=utf-8"});
+	    saveAs(blob, "file.txt");//saveAs(blob,filename)
+//		IE下  不支持
+//		var fso;
+//		try { 
+//			fso=new ActiveXObject("Scripting.FileSystemObject"); 
+//		} catch (e) { 
+//			alert("当前浏览器不支持")
+////			return
+//		} 
+//		var f1 = fso.createtextfile("E:\\1.txt",true);
+	</script>
+</html>
