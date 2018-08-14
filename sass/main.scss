@@ -860,3 +860,76 @@ label {
         }
     }
 }
+.nav-right{
+    display: none;
+    background: url(../images/nav-right.png)no-repeat;
+    width: 20px;
+    height: 17px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    -ms-transform:translateY(-50%);     /* IE 9 */
+    -moz-transform:translateY(-50%);    /* Firefox */
+    -webkit-transform:translateY(-50%);/* Safari 和 Chrome */
+    -o-transform:translateY(-50%); 
+    transform: translateY(-50%);
+}
+.nav-right-info{
+    position: absolute;
+    top: 70px;
+    width: 274px;
+    right: 6%;
+    border-radius: 6px;
+    padding: 0 20px;
+    background: #32325d;
+    display: none;
+    &.active{
+        display: block;
+    }
+    li{
+        border-bottom: 1px solid #47476e;
+        position: relative;
+        &.active{
+           a{
+               color: #1bd18f;
+           }
+        }
+    }
+    a{
+        color: #fff;
+        display: block;
+        position: relative;
+    }
+}
+.icon-arrow{
+    display: block;
+    width: 10px;
+    height: 6px;
+    background: url(../images/icon-arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    &.active{
+        transform: rotateX(180deg);
+    }
+}
+.nav-info-second{
+    padding-left: 10px;
+    display: none;
+    &.active{
+        display: block;
+    }
+    li{
+        border-bottom: none;
+    }
+    a{
+        font-size: 14px;
+        color: rgba(255,255,255,0.6);
+    }
+}
+@import "media";

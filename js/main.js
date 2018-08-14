@@ -35,4 +35,26 @@ $(function(){
 	    var blob = new Blob([JSON.stringify(content)], {type: "text/plain;charset=utf-8"});
 	    saveAs(blob, "file.txt");
 	})
+	
+	var off = false;
+	var second = false;
+	$(".nav-right").click(function(){
+		off  = !off;
+		if(off){
+			$(".nav-right-info").addClass("active")
+		}else{
+			$(".nav-right-info").removeClass("active")
+		}
+	})
+	$(".nav-right-pro").click(function(){
+		second = ! second;
+		if(second){
+			$(".nav-info-second").addClass("active")
+			$(".icon-arrow").addClass("active")
+		}else{
+			$(".nav-info-second").removeClass("active")
+			$(".icon-arrow").removeClass("active")
+		}
+		
+	})
 })

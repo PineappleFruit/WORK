@@ -480,7 +480,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  margin-bottom: 34px; }
+  padding-bottom: 34px; }
 
 .abstract {
   padding-top: 90px;
@@ -569,5 +569,14 @@
   height: 480px;
   overflow: hidden;
   margin: 0 auto; }
+
+.patent-pic-phone {
+  display: none;
+  width: 345px;
+  height: 264px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 30; }
 
 /*# sourceMappingURL=hlj.css.map */
