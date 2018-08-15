@@ -223,7 +223,8 @@
     height: auto;
     padding-bottom: 20px; }
     .footer span {
-      display: block; }
+      display: block;
+      margin-bottom: 10px; }
 
   .coo-info {
     width: auto;
@@ -294,9 +295,13 @@
   .patent-pic-phone {
     display: block; }
 
-  .patent .title {
-    padding-top: 16%;
-    padding-bottom: 6%; }
+  .patent {
+    height: auto;
+    background: none;
+    padding-bottom: 20%; }
+    .patent .title {
+      padding-top: 16%;
+      padding-bottom: 6%; }
 
   .product03-banner .banner-title {
     margin-right: 0;
@@ -439,6 +444,19 @@
     to {
       bottom: 14%;
       right: -35%;
-      opacity: 1; } } }
+      opacity: 1; } }
+  .cooperation-item {
+    height: 47px;
+    padding: 0 2%; }
+    .cooperation-item img {
+      vertical-align: middle; }
+
+  .pro03-con {
+    height: auto;
+    background: none;
+    padding-bottom: 20%; }
+
+  .pro03-list {
+    margin-top: 6%; } }
 
 /*# sourceMappingURL=media.css.map */

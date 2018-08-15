@@ -892,7 +892,7 @@ label {
         border-bottom: 1px solid #47476e;
         position: relative;
         &.active{
-           a{
+            >a{
                color: #1bd18f;
            }
         }

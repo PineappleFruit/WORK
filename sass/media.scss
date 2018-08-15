@@ -272,6 +272,7 @@
         padding-bottom: 20px;
         span{
             display: block;
+            margin-bottom: 10px;
         }
     }
     
@@ -352,7 +353,9 @@
         display: block;
     }
     .patent{
-        
+        height: auto;
+        background: none;
+        padding-bottom: 20%;
         .title{
             padding-top: 16%;
             padding-bottom: 6%;
@@ -535,6 +538,22 @@
             right: -35%;
             opacity: 1;
         }
+    }
+    .cooperation-item{
+        height: 47px;
+        padding: 0 2%;
+        img{
+//          height: 100%; 
+            vertical-align: middle;
+        }
+    }
+    .pro03-con{
+        height: auto;
+        background: none;
+        padding-bottom: 20%;
+    }
+    .pro03-list{
+        margin-top: 6%;
     }
 }
 
