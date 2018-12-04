@@ -1,10 +1,96 @@
+@charset "UTF-8"; //--UI效果图比例变量---
+$r: 1/16/(750/320);
+//px转rem函数
+@function r($px) {
+    @return $px * $r+rem;
+}
+.nav-right{
+    display: none;
+    background: url(../images/nav-right.png)no-repeat;
+    width: r(80);
+    height: r(80);
+    background-size: r(40) r(34);
+    background-position: center;
+    position: absolute;
+    right: r(30);
+    top: 50%;
+    -ms-transform:translateY(-50%);     /* IE 9 */
+    -moz-transform:translateY(-50%);    /* Firefox */
+    -webkit-transform:translateY(-50%);/* Safari 和 Chrome */
+    -o-transform:translateY(-50%); 
+    transform: translateY(-50%);
+}
+.nav-right-info{
+    position: absolute;
+    top: r(80);
+    width: r(463);
+    right: 6%;
+    border-radius: r(10);
+    padding: 0 r(30);
+    background: #32325d;
+    display: none;
+    &.active{
+        display: block;
+    }
+    li{
+        border-bottom: 1px solid #47476e;
+        position: relative;
+//      height: auto;
+//      height:r(116);
+        line-height: r(116);
+        font-size: r(24);
+        &.active{
+            >a{
+               color: #1bd18f;
+           }
+        }
+    }
+    a{
+        color: #fff;
+        display: block;
+        position: relative;
+    }
+}
+.icon-arrow{
+    display: block;
+    width: r(20);
+    height: r(12);
+    background: url(../images/icon-arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    &.active{
+        -ms-transform:rotateX(180deg);     /* IE 9 */
+        -moz-transform:rotateX(180deg);    /* Firefox */
+        -webkit-transform:rotateX(180deg);/* Safari 和 Chrome */
+        -o-transform:rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+}
+.nav-info-second{
+    padding-left: r(20);
+    display: none;
+    &.active{
+        display: block;
+    }
+    li{
+        border-bottom: none;
+    }
+    a{
+        font-size: r(24);
+        color: rgba(255,255,255,0.6)!important;
+    }
+}
 @media (max-width: 768px) { 
     .warp{
         width: auto;
     }
     body{
         min-width: auto;
-        padding-top: 70px;
+        padding-top: r(80);
     }
     .banner-title{
         float: none;    
@@ -14,11 +100,13 @@
     }
     .header{
         background: #f5f7f9;
-        padding: 0 8%;
+        padding: 0 r(50);
         position: fixed;
         top:0;
         width: 100%;
         z-index: 1000; 
+        height: r(80);
+        line-height: r(80);
         &:before{
             content: '';
             bottom: 0;
@@ -40,12 +128,14 @@
     .banner-title{
         width: auto;
         text-align: center;
-        margin-top: 16%;
+        margin-top: r(80);
         h1{
-            font-size: 18px;
+            font-size: r(34);
+            font-weight: bold;
         }
         p{
-            font-size: 14px;
+            font-size: r(26); 
+            margin-top: r(10);
         }
     }
     .banner-pic{
@@ -54,21 +144,30 @@
         float: none;
     }
     .jiangtai-pic{
-        width: 188px;
-        height: 236px;
+        width: r(497);
+        height: r(511);
+        margin-top: r(48);
     }
     .green-btn{
-        margin-top: 5%;   
+        margin-top: r(35);  
+        height: r(46);
+        line-height: r(46); 
+        padding: 0 r(20);
+        font-size: r(24);
     }
     .banner{
-        height: 532px;
+        height: r(848);
+        background-image: url(../images/index-banner-phone.png);
+        background-position: top center;
+        background-size: 100%;
     }
     /*********index**********/
     .index-01{
-        width: 165px;
-        height: 57px;
-        top: 26%;
-        left: -18%;
+        width: r(182);
+        height: r(123);
+        background-image: url(../images/index-01-phone.png);
+        top: r(280);
+        left: 0;
         animation:index01768 2s ;
         -webkit-animation:index01768 2s ; 
     }
@@ -76,12 +175,12 @@
     {
         from {
             left:-50%;
-            top: 60%;
+            top: r(380);
             opacity: 0;
         }
         to {
-            top: 26%;
-            left: -18%;
+            top: r(280);
+            left: 0;
             opacity: 1;
         }
     }
@@ -89,20 +188,21 @@
     {
         from {
             left:-50%;
-            top: 60%;
+            top: r(380);
             opacity: 0;
         }
         to {
-            top: 26%;
-            left: -18%;
+            top: r(280);
+            left: 0;
             opacity: 1;
         }
     }
     .index-02{
-        width: 167px;
-        height: 57px;
-        right: -20%;
-        top: 2%;
+        width: r(140);
+        height: r(120);
+        background-image: url(../images/index-02-phone.png);
+        right: 0;
+        top: 0;
         animation:index02768 2s ;
         -webkit-animation:index02768 2s ; 
     }
@@ -114,8 +214,8 @@
             opacity: 0;
         }
         to {
-            right: -20%;
-            top: 2%;
+            right: 0;
+            top: 0;
             opacity: 1;
         }
     }
@@ -127,50 +227,52 @@
             opacity: 0;
         }
         to {
-            right: -20%;
-            top: 2%;
+            right: 0;
+            top: 0;
             opacity: 1;
         }
     }
     .index-03{
-        width: 197px;
-        height: 77px;
-        bottom: -2%;
-        left: -34%;
+        width: r(136);
+        height: r(155);
+        background-image: url(../images/index-03-phone.png);
+        top: r(565);
+        left: 0;
         animation:index03768 2s ;
         -webkit-animation:index03768 2s ; 
     }
     @keyframes index03768
     {
         from {
-            bottom: -20%;
+            top: r(698);
             left: -50%;
             opacity: 0;
         }
         to {
-            bottom: -2%;
-            left: -34%;
+            top: r(565);
+            left: 0;
             opacity: 1;
         }
     }
     @-webkit-keyframes index03768 
     {
         from {
-            bottom: -20%;
+            top: r(698);
             left: -50%;
             opacity: 0;
         }
         to {
-            bottom: -2%;
-            left: -34%;
+            top: r(565);
+            left: 0;
             opacity: 1;
         }
     }
     .index-04{
-        width: 234px;
-        height: 120px;
-        right: -34%;
-        top: 67%;
+        width: r(135);
+        height: r(244);
+        background-image: url(../images/index-04-phone.png);
+        right: 0;
+        top: r(380);
         animation:index04768 2s ;
         -webkit-animation:index04768 2s ; 
     }
@@ -178,12 +280,12 @@
     {
         from {
             right: -56%;
-            top: 47%;
+            top: r(280);
             opacity: 0;
         }
         to {
-            right: -34%;
-            top: 67%;
+            right: 0%;
+            top: r(380);
             opacity: 1;
         }
     }
@@ -191,12 +293,12 @@
     {
         from {
             right: -56%;
-            top: 47%;
+            top: r(280);
             opacity: 0;
         }
         to {
-            right: -34%;
-            top: 67%;
+            right: 0;
+            top: r(380);
             opacity: 1;
         }
     }
@@ -206,32 +308,40 @@
             margin: 0 auto;
         }
         li{
-            padding: 0 6%;
-            margin-top: 20px;
+            padding: 0 r(50);
+            margin-top: r(50);
+            p{
+                font-size: r(26);
+                margin-top: r(10);
+            }
+            h4{
+                font-size: r(28);
+                margin-top: r(20);
+            }
         }
         li:first-child{
-            padding-left: 6%;
+            padding-left: r(50);
         }
         li:last-child{
-            padding-right: 6%;
+            padding-right: r(50);
         }
+        
     }
     .core{
-        padding-left: 6%;
-        padding-right: 6%;
+        padding: r(90) r(50) 0;
         h2{
             text-align: center;
         }
     }
     .core-item{
         margin-bottom: 20px;
-        line-height: 45px;
-        height: auto;
+        line-height: r(100);
+        height: r(100);
         p{
             font-size: 14px;
         }
         .icon{
-            margin: 8px 20px 0;
+//          margin: 8px 20px 0;
         }
     }
     .six{
@@ -247,7 +357,19 @@
             width: 100%;
             text-align: center;
             height: auto;
-            padding-bottom: 20px;
+            padding-bottom: r(40);
+            h5{
+                font-size: r(28);
+                margin-top: r(20);
+            }
+            p{
+                font-size: r(26);
+                margin-top: r(10);
+            }
+        }
+        .six-info{
+            float: none;
+            max-width: none;
         }
     }
     .six-icon{
@@ -273,22 +395,51 @@
         span{
             display: block;
             margin-bottom: 10px;
+            font-size: r(24);
         }
     }
     
     .coo-info{
         width: auto;
-        padding-left: 6%;
-        padding-right: 6%; 
-        
+        padding-left: r(40);
+        padding-right: r(40); 
+        padding-bottom: r(40);
+        padding-top: r(55);
+        h4{
+            font-size: r(28);
+        }
+        .coo-btn{
+            width: 100%;
+            height: r(66);
+            line-height: r(66);
+            font-size: r(24);
+        }
     }
     .coo-item{
         width: auto;
+        height: r(70);
+        line-height: r(70);
+        margin-bottom: r(30);
+        input{
+            height: 100%;
+            line-height: r(70);
+            font-size: r(28);
+        }
     }
     .cooperation-con{
-        padding: 0 6%;
+        padding: 0 r(50);
         width: auto;
         background-size: auto;
+        height: r(1048);
+        .title{
+            padding-top: r(70);
+            .coo-pic{
+                background-image: url(../images/zixun-txt-phone.png);
+                width: r(373);
+                height: r(65);
+                margin: 0 auto r(60);
+            }
+        }
     }
     .about-con{
         width: auto;
@@ -302,25 +453,70 @@
     }
     .abstract{
         margin: auto;
-        padding: 10% 6%;
+        padding: r(100) r(50) 0;
+        p{
+            font-size: r(28);
+        }
+    }
+    .abstract-list{
+        li{
+            font-size: r(28);
+        }
+    }
+    .abstract-txt{
+        width: r(183);
+        height: r(57);
+        background-image: url(../images/abstract-txt-phone.png);
+    }
+    .develop-txt{
+        width: r(298);
+        height: r(57);
+        background-image: url(../images/develop-txt-phone.png);
+    }
+    .adress-txt{
+        width: r(220);
+        height: r(57);
+        background-image: url(../images/address-txt-phone.png);
     }
     .develop{
         margin: auto;
-        padding: 10% 6%;
+        padding: r(100) r(50);
     }
     .develop-time{
         width: 40%;
+        font-size: r(28);
     }
     .develop-info{
         width: 60%;
+        font-size: r(28);
     }
     .adress{
         padding: 0 6%;
     }
     .product-banner{
-        .banner-title {
+        height: r(276);
+        background-image: url(../images/pro-banner-phone.png);
+        background-size: cover;
+        .banner-title{
+            width: auto;
+            text-align: center;
+            margin-top: 0;
+            padding-top: r(88);
             h1{
-                font-size: 20px;
+                font-size: r(34);
+                font-weight: bold;
+            }
+            p{
+                font-size: r(26); 
+                margin-top: r(10);
+            }
+        }
+    }
+    .product-list{
+        padding-top: r(10);
+        .list-info{
+            li{
+                margin-top: r(60);
             }
         }
     }
@@ -328,14 +524,15 @@
         width: 277px;
         height: 270px;
         background-size: 200px 236px;
+        background-position: center bottom;
         .product-pic-info{
-            left: 20%;
+            left: 4%;
             width: 36px;
             height: 38px;
         }
         .product-pic-info2{
             top: 40%;
-            right: 12%;
+            right: 26%;
             width: 23px;
             height: 25px;
         }
@@ -351,27 +548,40 @@
     }
     .patent-pic-phone{
         display: block;
+        width: r(650);
+        height: r(523);
     }
     .patent{
         height: auto;
         background: none;
         padding-bottom: 20%;
         .title{
-            padding-top: 16%;
-            padding-bottom: 6%;
+            padding-top: r(30);
+            margin-bottom: r(90);
+            
+            h3{
+                font-size: r(32);
+            }
+            p{
+                font-size: r(28);
+            }
         }
     }
     .product03-banner{
+        height: r(276);
+        background-image: url(../images/product03-banner-phone.png);
+        background-size: cover;
         .banner-title{
             margin-right: 0;
             margin-top: 0;
-            padding: 10% 6% 0;
+            padding: r(30) r(50) 0;
             width: auto;
             h1{
-                font-size: 18px;
+                font-size: r(34);
+                text-align: center;
             }
             p{
-                font-size: 14px;
+                font-size: r(26);
             }
         }
     }
@@ -391,8 +601,8 @@
         -webkit-animation: none;
     }
     .pro03-pic{
-        width: 346px;
-        height: 260px;
+        width: r(534);
+        height: r(426);
     }
     .pro03-fot-01{
         display: none;
@@ -402,6 +612,10 @@
     }
     .pro03-bd-list{
         width: auto;
+        p{
+            padding-top: r(15);
+            margin-top: 0;
+        }
     }
     .pro03-01{
         width: 143px;
@@ -551,9 +765,96 @@
         height: auto;
         background: none;
         padding-bottom: 20%;
+        padding-top: 0;
+        p{
+            font-size: r(28);
+        }
     }
     .pro03-list{
         margin-top: 6%;
+    }
+    .logo{
+        display: none;
+    }
+    .logo-phone{
+        display: block;
+    }
+    /*****************icon**************************/
+    .icon-renlian{
+        width: r(70);
+        height: r(66);
+    }
+    .icon-shuju{
+        width: r(70);
+        height: r(62);
+    }
+    .icon-yuyin{
+        width: r(47);
+        height: r(65);
+    }
+    .icon-yuncun{
+        width: r(78);
+        height: r(58);
+    }
+    .icon-six01{
+        width: r(70);
+        height: r(65);
+    }
+    .icon-six02{
+        width: r(70);
+        height: r(65);
+    }
+    .icon-six03{
+        width: r(65);
+        height: r(65);
+    }
+    .icon-six04{
+        width: r(65);
+        height: r(65);
+    }
+    .icon-six05{
+        width: r(59);
+        height: r(65);
+    }
+    .icon-six06{
+        width: r(65);
+        height: r(65);
+    }
+    .icon-zhineng{
+        width: r(71);
+        height: r(66);
+    }
+    .icon-jiesuo{
+        width: r(65);
+        height: r(65);
+    }
+    .icon-muxing{
+        width: r(64);
+        height: r(65);
+    }
+    .icon-beike{
+        width: r(60);
+        height: r(66);
+    }
+    .icon-anquan{
+        width: r(62);
+        height: r(71);
+    }
+    .icon-jiaowu{
+        width: r(69);
+        height: r(66);
+        margin-bottom: r(5);
+    }
+    .icon-youhua{
+        width: r(64);
+        height: r(64);
+        margin-bottom: r(7);
+    }
+    /*******************fix footer****************/
+   .fix-ft.footer{
+        position: relative;
+        width: 100%;
+        bottom: 0;
     }
 }
 

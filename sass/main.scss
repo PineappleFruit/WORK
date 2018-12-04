@@ -28,7 +28,8 @@ label {
 .banner{
     overflow: hidden;
     width: 100%;
-    height: 723px;
+//  height: 723px;
+    height: 1148px;
     background-image: url(../images/index-banner.png);
     background-repeat: no-repeat;
 //  background-size: 1920px 655px;
@@ -45,8 +46,8 @@ label {
     position: relative;
 }
 .product-banner{
-    height: 698px;
-    background-image: url(../images/product-banner.png);
+    height: 440px;
+    background-image: url(../images/pro-banner.png);
     background-repeat: no-repeat;
 //  background-size: 100% 796px;
     .banner-title{
@@ -56,7 +57,7 @@ label {
     }
 }
 .product03-banner{
-    height: 669px;
+    height: 439px;
     background-image: url(../images/product03-banner.png);
     background-repeat: no-repeat;
 //  background-size: 100% 629px;
@@ -75,6 +76,7 @@ label {
 .header{
     height: 70px;
     line-height: 70px;
+    font-size: 0;
     position: relative;
     &:before{
         content: '';
@@ -92,6 +94,18 @@ label {
     }
 }
 .logo{
+    a{
+        display: block;
+    }
+    img{
+        
+        vertical-align: middle;
+    }
+}
+.logo-phone{
+    display: none;
+    width: 100px;
+    height: 20px;
     a{
         display: block;
     }
@@ -208,6 +222,11 @@ label {
     position: relative;
     width: 100%;
 }
+.fix-ft.footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
 /****************block tansfrom*************/
 .index-block{
     position: absolute;
@@ -221,7 +240,7 @@ label {
     height: 115px;
     background-image: url(../images/index-01.png);
     left: 70px;
-    top: 94px;
+    top: 762px;
     animation:index01 2s ;
     -webkit-animation:index01 2s ; 
 }
@@ -229,12 +248,12 @@ label {
 {
     from {
         left:0px;
-        top: 184px;
+        top: 862px;
         opacity: 0;
     }
     to {
         left:70px;
-        top: 94px;
+        top: 762px;
         opacity: 1;
     }
 }
@@ -243,10 +262,12 @@ label {
     from {
         left:0px;
         opacity: 0;
+        top: 862px;
     }
     to {
         left:70px;
         opacity: 1;
+        top: 762px;
     }
 }
 .index-02{
@@ -254,7 +275,7 @@ label {
     height: 115px;
     background-image: url(../images/index-02.png);
     right: 193px;
-    top: 96px;
+    top: 190px;
     animation:index02 2s ;
     -webkit-animation:index02 2s ; 
 }
@@ -263,12 +284,12 @@ label {
     from {
         right: 0;
         opacity: 0;
-        top: 0;
+        top: 100px;
     }
     to {
         right: 193px;
         opacity: 1;
-        top: 96px;
+        top: 190px;
     }
 }
 @-webkit-keyframes index02 
@@ -276,12 +297,12 @@ label {
     from {
         right: 0;
         opacity: 0;
-        top: 0;
+        top: 100px;
     }
     to {
         right: 193px;
         opacity: 1;
-        top: 96px;
+        top: 190px;
     }
 }
 .index-03{
@@ -289,8 +310,9 @@ label {
     height: 155px;
     background-image: url(../images/index-03.png);
     left: 0;
-    bottom: 40px;
+//  bottom: 40px;
 //  bottom: 6%;
+    top: 370px;
     animation:index03 2s;
     -webkit-animation:index03 2s ; 
 }
@@ -299,12 +321,12 @@ label {
     from {
         left: -400px;
         opacity: 0;
-        bottom: -80px;
+        top: 470px;
     }
     to {
         left: 0;
         opacity: 1;
-        bottom: 40px;
+        top: 370px;
     }
 }
 @-webkit-keyframes index03 
@@ -312,20 +334,20 @@ label {
     from {
         left: -400px;
         opacity: 0;
-        bottom: -80px;
+        top: 470px;
     }
     to {
         left: 0;
         opacity: 1;
-        bottom: 40px;
+        top: 370px;
     }
 }
 .index-04{
-    width: 468px;
-    height: 240px;
+    width: 523px;
+    height: 350px;
     background-image: url(../images/index-04.png);
     right: 0;
-    top: 230px;
+    top: 466px;
     animation:index04 2s ;
     -webkit-animation:index04 2s ; 
 }
@@ -334,12 +356,12 @@ label {
     from {
         right: -470px;
         opacity: 0;
-        top: 100px;
+        top: 366px;
     }
     to {
         right: 0;
         opacity: 1;
-        top: 230px;
+        top: 466px;
     }
 }
 @-webkit-keyframes index04 
@@ -347,12 +369,12 @@ label {
     from {
         right: -470px;
         opacity: 0;
-        top: 100px;
+        top: 366px;
     }
     to {
         right: 0;
         opacity: 1;
-        top: 230px;
+        top: 466px;
     }
 }
 .index-footer01{
@@ -860,76 +882,119 @@ label {
         }
     }
 }
-.nav-right{
-    display: none;
-    background: url(../images/nav-right.png)no-repeat;
-    width: 20px;
-    height: 17px;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    right: 6%;
-    top: 50%;
-    -ms-transform:translateY(-50%);     /* IE 9 */
-    -moz-transform:translateY(-50%);    /* Firefox */
-    -webkit-transform:translateY(-50%);/* Safari 和 Chrome */
-    -o-transform:translateY(-50%); 
-    transform: translateY(-50%);
-}
-.nav-right-info{
-    position: absolute;
-    top: 70px;
-    width: 274px;
-    right: 6%;
-    border-radius: 6px;
-    padding: 0 20px;
-    background: #32325d;
-    display: none;
-    &.active{
-        display: block;
+//.nav-right{
+//  display: none;
+//  background: url(../images/nav-right.png)no-repeat;
+//  width: 20px;
+//  height: 17px;
+//  background-position: center;
+//  background-size: cover;
+//  position: absolute;
+//  right: 6%;
+//  top: 50%;
+//  -ms-transform:translateY(-50%);     /* IE 9 */
+//  -moz-transform:translateY(-50%);    /* Firefox */
+//  -webkit-transform:translateY(-50%);/* Safari 和 Chrome */
+//  -o-transform:translateY(-50%); 
+//  transform: translateY(-50%);
+//}
+//.nav-right-info{
+//  position: absolute;
+//  top: 70px;
+//  width: 274px;
+//  right: 6%;
+//  border-radius: 6px;
+//  padding: 0 20px;
+//  background: #32325d;
+//  display: none;
+//  &.active{
+//      display: block;
+//  }
+//  li{
+//      border-bottom: 1px solid #47476e;
+//      position: relative;
+//      &.active{
+//          >a{
+//             color: #1bd18f;
+//         }
+//      }
+//  }
+//  a{
+//      color: #fff;
+//      display: block;
+//      position: relative;
+//  }
+//}
+//.icon-arrow{
+//  display: block;
+//  width: 10px;
+//  height: 6px;
+//  background: url(../images/icon-arrow.png);
+//  background-repeat: no-repeat;
+//  background-position: center;
+//  background-size: cover;
+//  position: absolute;
+//  right: 0;
+//  top: 50%;
+//  &.active{
+//      transform: rotateX(180deg);
+//  }
+//}
+//.nav-info-second{
+//  padding-left: 10px;
+//  display: none;
+//  &.active{
+//      display: block;
+//  }
+//  li{
+//      border-bottom: none;
+//  }
+//  a{
+//      font-size: 14px;
+//      color: rgba(255,255,255,0.6)!important;
+//  }
+//}
+/***********modify**********/
+.product-banner,.product03-banner {
+    .nav{
+        li{
+            a{
+                color: #FFFFFF;
+            }
+            &.active{
+                a{
+                    color: #1bd18f;
+                }
+            }
+        }
+        
     }
-    li{
-        border-bottom: 1px solid #47476e;
-        position: relative;
-        &.active{
-            >a{
-               color: #1bd18f;
-           }
+    .header{
+        &:before{
+            background: transparent;
         }
     }
-    a{
-        color: #fff;
-        display: block;
-        position: relative;
+    .banner-title{
+        margin-top: 100px;
+        text-align: left;
+        h1{
+            color: #fff;
+        }
+        p{
+            color: #fff;
+        }
     }
 }
-.icon-arrow{
-    display: block;
-    width: 10px;
-    height: 6px;
-    background: url(../images/icon-arrow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    &.active{
-        transform: rotateX(180deg);
+.product-list,.pro03-list{
+    .icon{
+        margin: 0 auto;
     }
-}
-.nav-info-second{
-    padding-left: 10px;
-    display: none;
-    &.active{
-        display: block;
-    }
-    li{
-        border-bottom: none;
-    }
-    a{
-        font-size: 14px;
-        color: rgba(255,255,255,0.6);
+    .list-info{
+        li{
+            h4{
+                text-align: center;
+            }
+        }
     }
 }
 @import "media";

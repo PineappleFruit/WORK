@@ -5,13 +5,14 @@ $(function(){
 			_this.addClass('active').siblings().removeClass('active')
 		}
 	});
-	var height = $(window).height();
-	var bodyHeight = $("body").height();
-	var headerHeight = $(".header").height();
-	var footerHeight = $(".footer").height();
-	if(bodyHeight < height){
-		$(".cooperation-con").height(height - headerHeight - footerHeight)
-	}
+//	var height = $(window).height();
+//	var bodyHeight = $("body").height();
+//	var headerHeight = $(".header").height();
+//	var footerHeight = $(".footer").height();
+//	console.log(height);
+//	if(bodyHeight < height){
+//		$(".cooperation-con").height(height - headerHeight - footerHeight)
+//	}
 	
 	//file
 	$(".coo-btn").click(function(){

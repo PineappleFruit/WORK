@@ -4,16 +4,18 @@
     z-index: 20;
 }
 .banner-title{
-    width: 600px;
-    margin-top: 167px;
+//  width: 600px;
+    text-align: center;
+    margin-top: 70px;
     h1{
         font-size: 40px;
-        color: #1bd18f;
+        color: #1c1c1d;
+        font-weight: bold;
     }
     p{
         font-size: 24px;
         color: #414d5b;
-        margin-top: 25px;
+        margin-top: 20px;
     }
 }
 @keyframes big
@@ -63,7 +65,7 @@
     background: #16d08c;
     border-radius: 4px;
     padding: 0 28px;
-    margin-top: 36px;
+    margin-top: 30px;
     box-shadow: 0 2px 10px rgba(50,50,93,0.21);
     -webkit-transition: all 0.6s;
     -moz-transition: all 0.6s;
@@ -79,9 +81,10 @@
     margin-top: 60px;
 }
 .jiangtai-pic{
-    width: 376px;
-    height: 472px;
+    width: 689px;
+    height: 709px;
     overflow: hidden;
+    margin: 68px auto 0;
     img{
         width: 100%;
         height: 100%;
@@ -388,22 +391,34 @@
     -o-transition : all 0.6s;
     transition: all .6s; 
     .icon{
-        margin: 35px 20px 0 ;
+        margin: 0 20px ;
+    }
+    .core-icon{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
     p{
         max-width: 460px;
+    }
+    .core-product{
+        padding-left: 66px;
+    }
+    .core-teach{
+        padding-left: 74px;
     }
     a{
         display: block;
         width: 100%;
         height: 100%;
+        position: relative;
     }
     &:hover{
-        -webkit-transform: translateY(-4px);
-        -moz-transform: translateY(-4px);
-        -o-transform : translateY(-4px);
-        -ms-transform :  translateY(-4px);
-        transform: translateY(-4px);
+        -webkit-transform: translateY(-8px);
+        -moz-transform: translateY(-8px);
+        -o-transform : translateY(-8px);
+        -ms-transform :  translateY(-8px);
+        transform: translateY(-8px);
     }
 }
 
@@ -436,7 +451,7 @@
 }
 .cooperation-list{
     margin-top: 44px;
-    margin-bottom: 85px;
+//  margin-bottom: 85px;
 }
 .cooperation-item{
     float: left;
@@ -466,8 +481,8 @@
     }
 }
 .patent-pic{
-    width: 990px;
-    height: 437px;
+    width: 946px;
+    height: 523px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -523,8 +538,15 @@
     background-position: top center;
     background-size: 100% 354px;
     .title{
-        p{
-            color: rgba(255,255,255,0.3);
+        padding-top: 50px;
+        .coo-pic{
+            background-image: url(../images/zixun-txt.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 373px;
+            height: 46px;
+            margin: 0 auto 50px;
         }
     }
 }
@@ -533,6 +555,7 @@
     margin: 0 auto;
     background: #fff;
     box-shadow: 0 5px 9px rgba(8,8,36,0.06);
+    font-size: 0;
 }
 .coo-item{
     width: 430px;
@@ -580,7 +603,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    padding-bottom: 34px;
+    margin-bottom: 34px;
 }
 .abstract{
     padding-top: 90px;
@@ -590,6 +613,10 @@
     width: 183px;
     height: 46px;
     margin: 0 auto;
+    background-image: url(../images/abstract-txt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .abstract-list{
     li{
@@ -618,6 +645,10 @@
     width: 183px;
     height: 46px;
     margin: 0 auto;
+    background-image: url(../images/develop-txt-phone.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .develop-list{
     position: relative;
@@ -667,8 +698,11 @@
 .adress-txt{
     width: 220px;
     height: 46px;
-    margin: 0 auto;
-    margin-bottom: 35px;
+    margin: 0 auto 35px;
+    background-image: url(../images/address-txt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .adress-pic{
     width: 800px;
@@ -684,4 +718,7 @@
     overflow: hidden;
     position: relative;
     z-index: 30;
+}
+.cooperation{
+    height: 254px;
 }
